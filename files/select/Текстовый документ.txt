@@ -1,0 +1,16 @@
+<div class="select">
+                           <input class="select__input" type="hidden" name="server-time" value="">
+                           <div class="select__head">Server Time</div>
+                           <ul class="select__list">
+                              <li class="select__item">Server 1</li>
+                              <li class="select__item">Server 2</li>
+                              <li class="select__item">Server 3</li>
+                              <li class="select__item">Server 4</li>
+                              <li class="select__item">Server 5</li>
+                              <li class="select__item">Server 6</li>
+                              <li class="select__item">Server 7</li>
+                              <li class="select__item">Server 8</li>
+                              <li class="select__item">Server 9</li>
+                              <li class="select__item">Server 10</li>
+                           </ul>
+                     </div>

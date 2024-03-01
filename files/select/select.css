@@ -1,0 +1,151 @@
+.select {
+    display: block;
+    margin-top: 12px;
+    position: relative;
+    width: 100%;
+}
+.select__head,
+.select__list {
+    background-color: #fff;
+    cursor: pointer;
+    font-family: Open Sans Hebrew;
+    user-select: none;
+}
+.select__head {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 0;
+    height: 51px;
+    padding-left: 43px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.select__head::before {
+    background-color: #AE9C64;
+    bottom: 0;
+    border-radius: 6px;
+    content: '';
+    display: block;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+.select__head::after {
+    width: 23px;
+    height: 12px;
+    background: #FFF url("data:image/svg+xml;charset=UTF-8,%3csvg width='27' height='14' viewBox='0 0 27 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.5 14L26.0574 0.5H0.942632L13.5 14Z' fill='black'/%3e%3c/svg%3e") no-repeat center / cover;
+    position: absolute;
+    left: 10px;
+    bottom: 50%;
+    transform: translateY(50%);
+    content: '';
+    display: block;
+    transition: .2s ease-in;
+}
+.select__head.open::after {
+    transform: translateY(50%) scale(1, -1);
+}
+.select__list {
+    border: 1px solid #C8C8C8;
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    margin-top: 5px;
+    max-height: 240px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+    z-index: 3;
+    width: 100%;
+}
+.select__list::-webkit-scrollbar {
+    background-color: #F8F9FA;
+    padding: 5px;
+    width: 5px;
+}
+.select__list::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9;
+}
+.select__list .select__item:not(:first-child) {
+    border-top: 1px solid rgba(224, 229, 231, 0.5);
+}
+.select__list .select__item {
+    position: relative;
+    cursor: pointer;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding: 7px 12px;
+}
+.select__list .select__item.active {
+    color: #a5a5a5;
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+}
+.select__list .select__item:hover {
+    background-color: rgba(224, 229, 231, 0.5);
+}
+
+@media (max-width: 1024.98px) {
+
+    .select__head::before,
+    .sending-doc-to-notary__wrap-field::after {
+        height: 4px !important;
+    }
+
+    .select {
+        margin-top: 31px;
+    }
+    
+    .select__head {
+        font-size: 21px;
+        line-height: 32px;
+        height: 41px;
+    }
+
+    .select__head::after {
+        left: 0;
+    }
+
+    .select__list {
+        max-height: 200px;
+    }
+}
+@media (max-width: 575.98px) {
+
+    .select__head,
+    .select__list {
+        font-size: 18px;
+    }
+    .select__list {
+        line-height: 23px;
+        max-height: 170px;
+    }
+
+    .select__head {
+        height: 39px;
+    }
+
+    .select__head::after {
+        background: #FFF url("data:image/svg+xml;charset=UTF-8,%3csvg width='23' height='10' viewBox='0 0 27 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.5 14L26.0574 0.5H0.942632L13.5 14Z' fill='black'/%3e%3c/svg%3e") no-repeat center / cover;
+        height: 9px;
+        left: 0;
+        width: 14px;
+    }
+}
